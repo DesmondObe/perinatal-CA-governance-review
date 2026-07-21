@@ -1,0 +1,35 @@
+study_id,system_group,gms_total,model_class_analytic,model_class_raw,publication_year
+1,Parentbot,11,Rule-based,Rule-based,2025
+2,,14,Unspecified AI,Unspecified AI,2020
+3,,2,Unspecified AI,Unspecified AI,2021
+4,,4,Hybrid,Hybrid,2025
+5,Woebot,11,Rule-based,Unspecified AI,2023
+6,,4,LLM,LLM,2025
+7,,10,LLM,LLM,2025
+8,,8,Rule-based,Rule-based,2022
+9,,4,Classical ML,Classical ML,2020
+10,,4,Classical ML,Classical ML,2024
+11,,7,LLM,LLM,2025
+12,,7,LLM,LLM,2025
+13,,3,Hybrid,Hybrid,2024
+14,ALBA,11,Rule-based,Rule-based,2025
+15,,3,Hybrid,Hybrid,2025
+16,,11,Rule-based,Rule-based,2024
+17,Parentbot,12,Rule-based,Rule-based,2024
+18,,5,Hybrid,Hybrid,2021
+19,,7,Hybrid,Hybrid,2022
+20,,3,LLM,LLM,2025
+21,,5,Not reported,Not reported,2023
+22,ALBA,14,Rule-based,Rule-based,2025
+23,,8,Rule-based,Hybrid,2021
+24,,6,LLM,LLM,2024
+25,,6,Not reported,Not reported,2022
+26,,13,Rule-based,Rule-based,2024
+27,,9,Rule-based,Rule-based,2025
+28,,8,Rule-based,Rule-based,2025
+29,,14,Hybrid,Hybrid,2024
+30,Woebot,10,Rule-based,Hybrid,2023
+31,,6,Unspecified AI,Unspecified AI,2023
+32,,5,Rule-based,Rule-based,2019
+33,,5,Hybrid,Hybrid,2018
+34,Parentbot,5,Rule-based,Rule-based,2023

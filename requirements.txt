@@ -1,0 +1,6 @@
+numpy>=1.24
+scipy>=1.11
+# figures/figures.ipynb additionally requires:
+matplotlib>=3.7
+pandas>=2.0
+geopandas>=0.14

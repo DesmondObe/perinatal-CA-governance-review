@@ -1,0 +1,63 @@
+cff-version: 1.2.0
+title: >-
+  Analysis code for a scoping review of governance and privacy in AI-supported
+  conversational agents for perinatal mental health
+message: >-
+  If you use this software or the accompanying data, please cite both the
+  software (this repository) and the associated article.
+type: software
+authors:
+  -- given-names: Desmond. O
+    family-names: Obe
+    affiliation: Department of Information Technology, College of Science and Engineering, James Cook University, Cairns, Australia
+    orcid: https://orcid.org/0000-0003-2903-6085
+
+  - given-names: Adrian B. R
+    family-names: Shatte
+    affiliation: Department of Information Technology, College of Science and Engineering, James Cook University, Townsville, Australia
+
+  - given-names: Samantha J.
+    family-names: Teague
+    affiliation: Department of Psychology, College of Healthcare Sciences, James Cook University, Townsville, Australia
+
+  - given-names: Ickjai
+    family-names: Lee
+    affiliation: Department of Information Technology, College of Science and Engineering, James Cook University, Cairns, Australia
+repository-code: "https://github.com/DesmondObe/perinatal-ca-governance-review"
+license: CC-BY-4.0
+version: 1.0.0
+date-released: "[AUTHOR ACTION: YYYY-MM-DD]"
+keywords:
+  - perinatal mental health
+  - depres*
+  - anxiety*
+  - conversational agents
+  - AI governance
+  - privacy-preserving machine learning
+  - LLM
+  - federated learning
+preferred-citation:
+  type: article
+  title: >-
+    A scoping review of governance and privacy in AI-supported conversational
+    agents for perinatal mental health
+  authors:authors:
+  - given-names: Desmond. O
+    family-names: Obe
+    affiliation: Department of Information Technology, College of Science and Engineering, James Cook University, Cairns, Australia
+    orcid: https://orcid.org/0000-0003-2903-6085
+
+  - given-names: Adrian B. R
+    family-names: Shatte
+    affiliation: Department of Information Technology, College of Science and Engineering, James Cook University, Townsville, Australia
+
+  - given-names: Samantha J.
+    family-names: Teague
+    affiliation: Department of Psychology, College of Healthcare Sciences, James Cook University, Townsville, Australia
+
+  - given-names: Ickjai
+    family-names: Lee
+    affiliation: Department of Information Technology, College of Science and Engineering, James Cook University, Cairns, Australia
+
+  journal: Will be avaliable upon acceptance 
+  year: 2026
