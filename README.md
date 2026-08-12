@@ -15,7 +15,7 @@ pip install -r requirements.txt
 python analysis/analysis_script.py
 ```
 
-Runs in under a second. The expected output is stored in [`outputs/analysis_output.txt`](outputs/analysis_output.txt); the script prints the manuscript's reported values alongside the computed ones so any discrepancy is immediately visible.
+The expected output is stored in [`outputs/analysis_output.txt`](outputs/analysis_output.txt); the script prints the manuscript's reported values alongside the computed ones so any discrepancy is immediately visible.
 
 ---
 
@@ -74,7 +74,7 @@ Open in Jupyter and run all cells. All figures are written at 300 dpi; `geopanda
 
 ## Data provenance
 
-`data/gms_scores.csv` is derived from the verified extraction dataset described in the article. Every score traces to dimension-level evidence quoted from the source publication, provided in full in Supplementary Table S8. The complete extraction dataset, correction log and variable codebook accompany the article as Supplementary Data and are deposited on the Open Science Framework.
+`data/gms_scores.csv` is derived from the verified extraction dataset described in the article (by both independent reviewers). Every score traces to dimension-level evidence quoted from the source publication, provided in full in Supplementary Table S8. The complete extraction dataset, correction log and variable codebook accompany the article as Supplementary Data and are deposited on the Open Science Framework.
 
 Review protocol: [osf.io/63mpb](https://osf.io/63mpb) (registered 3 November 2025)
 
