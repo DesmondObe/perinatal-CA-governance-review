@@ -25,7 +25,7 @@ study_id,system_group,gms_total,model_class_analytic,model_class_raw,publication
 24,,6,LLM,LLM,2024
 25,,6,Not reported,Not reported,2022
 26,,13,Rule-based,Rule-based,2024
-27,,9,Rule-based,Rule-based,2025
+27,Rover,9,Rule-based,Rule-based,2025
 28,,8,Rule-based,Rule-based,2025
 29,,14,Hybrid,Hybrid,2024
 30,Woebot,10,Rule-based,Hybrid,2023
@@ -33,3 +33,4 @@ study_id,system_group,gms_total,model_class_analytic,model_class_raw,publication
 32,,5,Rule-based,Rule-based,2019
 33,,5,Hybrid,Hybrid,2018
 34,Parentbot,5,Rule-based,Rule-based,2023
+35,Rover,7,Rule-based,Rule-based,2025
