@@ -44,12 +44,13 @@ The review scored governance across six dimensions (privacy, safety, monitoring,
 
 | Analysis | Test | Reported result |
 |---|---|---|
-| Omnibus, four defined model classes (n = 29 studies) | Kruskal–Wallis | H = 11.55, p = 0.009 |
-| **Primary contrast**, rule-based vs LLM-and-hybrid | Mann–Whitney U | U = 152.0, p = 0.003, r = 0.67 |
+| Omnibus, four defined model classes (n = 30 studies) | Kruskal–Wallis | H = 11.60, p = 0.009 |
+| Primary contrast, rule-based vs LLM-and-hybrid | Mann–Whitney U | U = 161.5, p = 0.003, r = 0.66 |
 | Secondary, ordinal complexity vs governance | Spearman | rho = −0.53, p = 0.003 |
-| Sensitivity 1, unique systems (n = 25) | Kruskal–Wallis, Mann–Whitney | H = 9.83, p = 0.020; U = 109.0, p = 0.007 |
-| Sensitivity 2, studies published 2022–2025 | Mann–Whitney U | medians 11.0 vs 6.0; U = 112.0, p = 0.005 |
-| Sensitivity 3, raw extracted model classes | Mann–Whitney U | medians 11.0 vs 6.0; U = 131.5, p = 0.011, r = 0.59 |
+| Sensitivity 1, unique systems (n = 25) | Kruskal–Wallis, Mann–Whitney | H = 9.86, p = 0.020; U = 109.0, p = 0.007, r = 0.68 |
+| Sensitivity 2, studies published 2022–2025 | Mann–Whitney U | medians 11.0 vs 6.0; U = 119.5, p = 0.006, r = 0.67 |
+| Sensitivity 3, raw extracted model classes | Mann–Whitney U | medians 10.0 vs 6.0; U = 141.0, p = 0.013, r = 0.57 |
+| Sensitivity 4, peer-reviewed journal publications only | Mann–Whitney U | medians 10.5 vs 7.0; U = 79.5, p = 0.024, r = 0.62 |
 
 Given tied observations, Mann–Whitney p values use the asymptotic normal approximation with tie correction, and Kruskal–Wallis p values the asymptotic chi-squared reference distribution. Because the Governance Maturity Score and these comparisons were developed after protocol registration, they are exploratory and support rather than establish the observed patterns.
 
@@ -63,9 +64,9 @@ The five studies classified as unspecified AI or not reported cannot be ordered 
 
 | Notebook cell | Figure | Content | Output files |
 |---|---|---|---|
-| 3 | **Fig. 2** | Geographic distribution of perinatal conversational agent development, 30 unique systems coloured by World Bank income group | `fig_geography.png`, `fig_geography.pdf` |
-| 5 | **Fig. 3** | Publications over time by model class, 34 studies, stacked bars across non-overlapping periods | `fig_pubtime.png`, `fig_pubtime.pdf` |
-| 6 | **Fig. 4** | Governance Maturity Profile, mean score per dimension (0-4) across 34 studies | `fig_radar_corrected.png`, `fig_radar_corrected.pdf` |
+| 3 | **Fig. 2** | Geographic distribution of perinatal conversational agent development, 30 unique systems coloured by World Bank income group | `fig_geography.png`|
+| 5 | **Fig. 3** | Publications over time by model class, 34 studies, stacked bars across non-overlapping periods | `fig_pubtime.png`|
+| 6 | **Fig. 4** | Governance Maturity Profile, mean score per dimension (0-4) across 34 studies | `fig_radar_corrected.png`|
 | 7 | **Fig. 5** | Governance maturity by model class and crisis-escalation tier, each study plotted by class against its total score | `fig_governance_by_class.png` |
 
 Open in Jupyter and run all cells. All figures are written at 300 dpi; `geopandas` is required for the map in cell 3.
