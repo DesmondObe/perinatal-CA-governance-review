@@ -1,36 +1,36 @@
-study_id,system_group,gms_total,model_class_analytic,model_class_raw,publication_year
-1,Parentbot,11,Rule-based,Rule-based,2025
-2,,14,Unspecified AI,Unspecified AI,2020
-3,,2,Unspecified AI,Unspecified AI,2021
-4,,4,Hybrid,Hybrid,2025
-5,Woebot,11,Rule-based,Unspecified AI,2023
-6,,4,LLM,LLM,2025
-7,,10,LLM,LLM,2025
-8,,8,Rule-based,Rule-based,2022
-9,,4,Classical ML,Classical ML,2020
-10,,4,Classical ML,Classical ML,2024
-11,,7,LLM,LLM,2025
-12,,7,LLM,LLM,2025
-13,,3,Hybrid,Hybrid,2024
-14,ALBA,11,Rule-based,Rule-based,2025
-15,,3,Hybrid,Hybrid,2025
-16,,11,Rule-based,Rule-based,2024
-17,Parentbot,12,Rule-based,Rule-based,2024
-18,,5,Hybrid,Hybrid,2021
-19,,7,Hybrid,Hybrid,2022
-20,,3,LLM,LLM,2025
-21,,5,Not reported,Not reported,2023
-22,ALBA,14,Rule-based,Rule-based,2025
-23,,8,Rule-based,Hybrid,2021
-24,,6,LLM,LLM,2024
-25,,6,Not reported,Not reported,2022
-26,,13,Rule-based,Rule-based,2024
-27,Rover,9,Rule-based,Rule-based,2025
-28,,8,Rule-based,Rule-based,2025
-29,,14,Hybrid,Hybrid,2024
-30,Woebot,10,Rule-based,Hybrid,2023
-31,,6,Unspecified AI,Unspecified AI,2023
-32,,5,Rule-based,Rule-based,2019
-33,,5,Hybrid,Hybrid,2018
-34,Parentbot,5,Rule-based,Rule-based,2023
-35,Rover,7,Rule-based,Rule-based,2025
+study_id,system_group,publication_year,venue,model_class_analytic,model_class_raw,crisis_tier,privacy,safety,monitoring,regulation,bias_fairness,consent,gms_total
+1,Parentbot,2025,Journal,Rule-based,Rule-based,Human-in-the-loop,2,2,0,2,2,3,11
+2,,2020,Journal,Unspecified AI,Unspecified AI,Automated detection + human follow-up,2,3,2,2,3,2,14
+3,,2021,Journal,Unspecified AI,Unspecified AI,None,0,1,0,0,1,0,2
+4,,2025,Journal,Hybrid,Hybrid,Static disclaimer only,1,1,0,0,2,0,4
+5,Woebot,2023,Journal,Rule-based,Unspecified AI,Automated detection (no human),0,3,1,2,3,2,11
+6,,2025,Conference,LLM,LLM,Automated detection (no human),0,2,1,0,1,0,4
+7,,2025,Conference,LLM,LLM,Not reported,1,1,1,3,2,2,10
+8,,2022,Journal,Rule-based,Rule-based,Human-in-the-loop,0,3,0,1,2,2,8
+9,,2020,Conference,Classical ML,Classical ML,Human-in-the-loop,0,2,0,0,2,0,4
+10,,2024,Conference,Classical ML,Classical ML,Not reported,0,2,0,0,2,0,4
+11,,2025,Journal,LLM,LLM,None,0,1,0,1,3,2,7
+12,,2025,Journal,LLM,LLM,Not reported,0,0,0,1,3,3,7
+13,,2024,Conference,Hybrid,Hybrid,Human-in-the-loop,0,2,0,0,1,0,3
+14,ALBA,2025,Journal,Rule-based,Rule-based,Not reported,2,2,1,2,2,2,11
+15,,2025,Conference,Hybrid,Hybrid,Automated detection (no human),0,3,0,0,0,0,3
+16,,2024,Journal,Rule-based,Rule-based,None,2,1,0,3,2,3,11
+17,Parentbot,2024,Journal,Rule-based,Rule-based,Human-in-the-loop,2,3,1,2,2,2,12
+18,,2021,Journal,Hybrid,Hybrid,Static disclaimer only,0,2,0,1,2,0,5
+19,,2022,Journal,Hybrid,Hybrid,None,0,1,1,2,1,2,7
+20,,2025,Journal,LLM,LLM,None,0,0,0,0,2,1,3
+21,,2023,Conference,Not reported,Not reported,Not reported,1,1,0,0,3,0,5
+22,ALBA,2025,Journal,Rule-based,Rule-based,None,2,2,1,3,2,4,14
+23,,2021,Journal,Rule-based,Hybrid,None,0,0,1,2,3,2,8
+24,,2024,Conference,LLM,LLM,None,2,0,1,0,3,0,6
+25,,2022,Conference,Not reported,Not reported,None,0,0,0,3,1,2,6
+26,,2024,Journal,Rule-based,Rule-based,None,2,1,1,3,2,4,13
+27,Rover,2025,Journal,Rule-based,Rule-based,Hotline / emergency contacts,1,2,0,1,3,2,9
+28,,2025,Journal,Rule-based,Rule-based,Not reported,2,0,1,1,3,1,8
+29,,2024,Journal,Hybrid,Hybrid,Automated detection + human follow-up,2,3,2,2,2,3,14
+30,Woebot,2023,Journal,Rule-based,Hybrid,Automated detection (no human),1,3,0,4,2,0,10
+31,,2023,Journal,Unspecified AI,Unspecified AI,Not reported,2,0,1,0,2,1,6
+32,,2019,Conference,Rule-based,Rule-based,Automated detection + human follow-up,3,2,0,0,0,0,5
+33,,2018,Conference,Hybrid,Hybrid,Hotline / emergency contacts,1,2,0,0,0,2,5
+34,Parentbot,2023,Journal,Rule-based,Rule-based,Human-in-the-loop,0,2,0,0,3,0,5
+35,Rover,2025,Journal,Rule-based,Rule-based,Hotline / emergency contacts,0,2,0,2,3,0,7

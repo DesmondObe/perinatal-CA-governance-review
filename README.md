@@ -1,98 +1,82 @@
-# Governance and privacy in AI-supported conversational agents for perinatal mental health
+# Governance, privacy and design in AI-supported conversational agents for perinatal mental health
 
-Analysis code and data for the scoping review *A scoping review of governance and privacy in AI-supported conversational agents for perinatal mental health*.
+Analysis code and data for the article *Scoping review of governance, privacy, and design in AI-supported conversational agents for perinatal mental health* (Obe, Teague, Lee and Shatte).
 
-This repository reproduces every inferential statistic reported in the article, and generates the published figures.
-
----
+The repository reproduces every inferential statistic reported in the article and regenerates Figs. 2 to 7.
 
 ## Reproduce the analysis
 
 ```bash
 git clone https://github.com/DesmondObe/perinatal-CA-governance-review.git
 cd perinatal-CA-governance-review
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python analysis/analysis_script.py
 ```
 
-The expected output is stored in [`outputs/analysis_output.txt`](outputs/analysis_output.txt); the script prints the manuscript's reported values alongside the computed ones so any discrepancy is immediately visible.
+The script prints all results and writes them to `outputs/analysis_output.txt`, ending with a summary of the values reported in the article. The analyses in the article used Python 3.11, NumPy 1.26.4 and SciPy 1.11.4.
 
----
+To regenerate the figures, open `figures/figures.ipynb` from the `figures/` folder and run all cells. Figures are written to `figures/output/` as PNG and PDF.
 
-## What is here
+## Contents
 
 ```
 ├── data/
-│   ├── gms_scores.csv          Governance Maturity Score totals and model classes (n = 34)
-│   └── README.md               Data dictionary
+│   ├── gms_scores.csv            One row per study (N = 35): model class, venue, year,
+│   │                             crisis-escalation tier, six GMS dimension scores and total
+│   ├── governance_elements.csv   Nine governance elements, reported (1) or not (0), per study
+│   └── README.md                 Data dictionary
 ├── analysis/
-│   └── analysis_script.py      All inferential statistics
+│   └── analysis_script.py        All descriptive and inferential statistics
 ├── figures/
-│   └── figures.ipynb           Figures 2, 3 and 4
+│   ├── figures.ipynb             Figs. 2 to 7
+│   ├── countries.geojson         Country boundaries for Fig. 2
+│   └── output/                   Generated figures
 ├── outputs/
-│   └── analysis_output.txt     Captured output of a verified run
+│   └── analysis_output.txt       Output of a verified run
 ├── requirements.txt
 ├── CITATION.cff
-└── LICENSE                     CC BY 4.0
+└── LICENSE                       MIT (code), CC BY 4.0 (data and figures)
 ```
 
----
+## Analyses
 
-## What the analysis does
+Governance was scored on six dimensions (privacy, safety, monitoring, regulation, bias and fairness, consent), each anchored 0 to 4 and summed to a Governance Maturity Score (GMS) of 0 to 24 per study. The script tests whether the GMS differs by conversational model class.
 
-The review scored governance across six dimensions (privacy, safety, monitoring, regulation, bias and fairness, consent), each anchored 0–4 and summed to a Governance Maturity Score of 0–24 per study. `analysis_script.py` tests whether that score differs by conversational model class.
-
-| Analysis | Test | Reported result |
+| Analysis | Test | Result |
 |---|---|---|
-| Omnibus, four defined model classes (n = 30 studies) | Kruskal–Wallis | H = 11.60, p = 0.009 |
-| Primary contrast, rule-based vs LLM-and-hybrid | Mann–Whitney U | U = 161.5, p = 0.003, r = 0.66 |
-| Secondary, ordinal complexity vs governance | Spearman | rho = −0.53, p = 0.003 |
-| Sensitivity 1, unique systems (n = 25) | Kruskal–Wallis, Mann–Whitney | H = 9.86, p = 0.020; U = 109.0, p = 0.007, r = 0.68 |
-| Sensitivity 2, studies published 2022–2025 | Mann–Whitney U | medians 11.0 vs 6.0; U = 119.5, p = 0.006, r = 0.67 |
-| Sensitivity 3, raw extracted model classes | Mann–Whitney U | medians 10.0 vs 6.0; U = 141.0, p = 0.013, r = 0.57 |
-| Sensitivity 4, peer-reviewed journal publications only | Mann–Whitney U | medians 10.5 vs 7.0; U = 79.5, p = 0.024, r = 0.62 |
+| Four defined model classes (n = 30 studies) | Kruskal–Wallis | H = 11.60, p = 0.009 |
+| Primary contrast: rule-based vs LLM and hybrid | Mann–Whitney U | U = 161.5, p = 0.003, r = 0.66 |
+| Sensitivity 1: one value per system (n = 25) | Kruskal–Wallis; Mann–Whitney U | H = 9.86, p = 0.020; U = 109.0, p = 0.007 |
+| Sensitivity 2: studies published 2022–2025 | Mann–Whitney U | medians 11.0 vs 6.0; U = 119.5, p = 0.006 |
+| Sensitivity 3: raw extracted model classes | Mann–Whitney U | medians 10.0 vs 6.0; U = 141.0, p = 0.013, r = 0.57 |
+| Sensitivity 4: journal publications only | Mann–Whitney U | medians 10.5 vs 7.0; U = 79.5, p = 0.024, r = 0.62 |
 
-Given tied observations, Mann–Whitney p values use the asymptotic normal approximation with tie correction, and Kruskal–Wallis p values the asymptotic chi-squared reference distribution. Because the Governance Maturity Score and these comparisons were developed after protocol registration, they are exploratory and support rather than establish the observed patterns.
+Mann–Whitney p values use the asymptotic normal approximation with tie correction, and Kruskal–Wallis p values the asymptotic chi-squared distribution. r is the rank-biserial correlation. The five studies classified as unspecified AI or not reported cannot be ordered by architecture and are excluded from inferential comparisons. The GMS was developed after protocol registration, so these comparisons are exploratory.
 
-The five studies classified as unspecified AI or not reported cannot be ordered by architecture and are excluded from all inferential comparisons.
-
----
+The script also prints a Spearman correlation between an ordinal complexity rank and the GMS. It is not reported in the article because the relationship is not monotonic.
 
 ## Figures
 
-`figures/figures.ipynb` generates four of the five figures in the article. Figure 1, the PRISMA-ScR flow diagram, is produced separately.
+| Article figure | Content | Source |
+|---|---|---|
+| Fig. 2 | Geographic distribution of the 30 unique systems | Counts entered in the notebook (Supplementary Data 1, sheet 1) |
+| Fig. 3 | Publications over time by model class | `data/gms_scores.csv` |
+| Fig. 4 | Clinical scope, functions and therapeutic foundations | Counts entered in the notebook (Supplementary Data 1, sheets 4 and 10) |
+| Fig. 5 | GMS by model class and crisis-escalation tier | `data/gms_scores.csv` |
+| Fig. 6 | Mean score on each GMS dimension | `data/gms_scores.csv` |
+| Fig. 7 | Governance elements reported by model class | `data/governance_elements.csv` |
 
-| Notebook cell | Figure | Content | Output files |
-|---|---|---|---|
-| 3 | **Fig. 2** | Geographic distribution of perinatal conversational agent development, 30 unique systems coloured by World Bank income group | `fig_geography.png`|
-| 5 | **Fig. 3** | Publications over time by model class, 34 studies, stacked bars across non-overlapping periods | `fig_pubtime.png`|
-| 6 | **Fig. 4** | Governance Maturity Profile, mean score per dimension (0-4) across 34 studies | `fig_radar_corrected.png`|
-| 7 | **Fig. 5** | Governance maturity by model class and crisis-escalation tier, each study plotted by class against its total score | `fig_governance_by_class.png` |
-
-Open in Jupyter and run all cells. All figures are written at 300 dpi; `geopandas` is required for the map in cell 3.
-
----
+Fig. 1 (PRISMA-ScR flow diagram) is produced separately.
 
 ## Data provenance
 
-`data/gms_scores.csv` is derived from the verified extraction dataset described in the article (by both independent reviewers). Every score traces to dimension-level evidence quoted from the source publication, provided in full in Supplementary Table S8. The complete extraction dataset, correction log and variable codebook accompany the article as Supplementary Data and are deposited on the Open Science Framework.
+The files in `data/` are derived from the verified extraction dataset, provided with the article as Supplementary Data 1. The evidence supporting every dimension score is in sheet 7 (GMS_Evidence), scores and totals in sheet 6 (GMS_Scores), and the full codebook and dataset in sheet 10. The review protocol and verified dataset are also on the Open Science Framework: https://osf.io/63mpb (registered 3 November 2025).
 
-Review protocol: [osf.io/63mpb](https://osf.io/63mpb) (registered 3 November 2025)
+## Citation
 
----
-
-## Citing this work
-
-Please cite the article, and the software if you use or adapt the code:
-
-> Full article citation would be added on acceptance]
-
-> Zenodo DOI will be added when created
-
-GitHub renders a "Cite this repository" button from [`CITATION.cff`](CITATION.cff).
-
----
+Please cite the article, and this repository if you use or adapt the code. GitHub shows a "Cite this repository" button generated from `CITATION.cff`.
 
 ## Licence
 
-[CC BY 4.0](LICENSE). Reuse and adaptation are permitted with attribution.
+Code is released under the MIT License. Data, figures and outputs are released under CC BY 4.0. See `LICENSE`.

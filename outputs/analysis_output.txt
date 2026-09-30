@@ -1,0 +1,50 @@
+=== Descriptive (N = 35 studies) ===
+mean 7.49, median 7.0, IQR 5.0-10.5, range 2-14
+bands: None 4 (11%); Basic 16 (46%); Moderate 10 (29%); Advanced 5 (14%); Comprehensive 0 (0%)
+  Rule-based    n=15  median 10.0  IQR 8.0-11.0  range 5-14
+  Classical ML  n= 2  median  4.0  IQR 4.0-4.0  range 4-4
+  Hybrid        n= 7  median  5.0  IQR 3.5-6.0  range 3-14
+  LLM           n= 6  median  6.5  IQR 4.5-7.0  range 3-10
+  LLM + hybrid  n=13  median  5.0  IQR 4.0-7.0  range 3-14
+
+=== Governance elements reported, by model class (Fig. 7) ===
+element                       Rule-based          Hybrid             LLM    Classical ML
+explicit_consent               11/15  73%        2/7   29%        3/6   50%        0/2    0%
+named_regulation                4/15  27%        0/7    0%        1/6   17%        0/2    0%
+privacy_at_rest                10/15  67%        2/7   29%        1/6   17%        0/2    0%
+storage_location                4/15  27%        1/7   14%        3/6   50%        0/2    0%
+clinical_supervision            6/15  40%        2/7   29%        0/6    0%        0/2    0%
+human_crisis_pathway            5/15  33%        2/7   29%        0/6    0%        1/2   50%
+automated_detection             4/15  27%        3/7   43%        1/6   17%        1/2   50%
+ai_identity                     4/15  27%        3/7   43%        2/6   33%        0/2    0%
+bias_fairness                   9/15  60%        3/7   43%        4/6   67%        0/2    0%
+
+=== Primary analysis (studies in the four defined classes, n = 30) ===
+Kruskal-Wallis, four classes: H=11.60, p=0.0089
+Kruskal-Wallis, three classes (excluding classical ML, n=28): H=8.85, p=0.0120
+Mann-Whitney U: rule-based n=15, median 10.0 vs LLM + hybrid n=13, median 5.0; U=161.5, p=0.0033, r=0.66
+Spearman, complexity rank (rule-based < classical ML < hybrid < LLM) vs GMS: rho=-0.53, p=0.0028 [not reported in the article; the relationship is not monotonic]
+
+=== Sensitivity 1: multi-study systems collapsed to their mean ===
+n=25 systems; Kruskal-Wallis H=9.86, p=0.0198
+Mann-Whitney U: rule-based n=10, median 8.7 vs LLM + hybrid n=13, median 5.0; U=109.0, p=0.0067, r=0.68
+
+=== Sensitivity 2: studies published 2022-2025 ===
+Mann-Whitney U: rule-based n=13, median 11.0 vs LLM + hybrid n=11, median 6.0; U=119.5, p=0.0056, r=0.67
+
+=== Sensitivity 3: raw extracted classes (response-generation rule not applied) ===
+Mann-Whitney U: rule-based n=12, median 10.0 vs LLM + hybrid n=15, median 6.0; U=141.0, p=0.0132, r=0.57
+
+=== Sensitivity 4: peer-reviewed journal publications only ===
+Mann-Whitney U: rule-based n=14, median 10.5 vs LLM + hybrid n=7, median 7.0; U=79.5, p=0.0240, r=0.62
+
+=== Summary for the article ===
+GMS, all studies: median 7 (IQR 5-10.5), mean 7.5, range 2-14
+Kruskal-Wallis, four classes: H = 11.60, p = 0.009
+Primary: rule-based median 10 vs LLM + hybrid median 5; U = 161.5, p = 0.003, r = 0.66
+Sensitivity 1: H = 9.86, p = 0.020; U = 109.0, p = 0.007
+Sensitivity 2: U = 119.5, p = 0.006
+Sensitivity 3: U = 141.0, p = 0.013, r = 0.57
+Sensitivity 4: U = 79.5, p = 0.024, r = 0.62
+
+Python 3.11.9, numpy 1.26.4, scipy 1.11.4

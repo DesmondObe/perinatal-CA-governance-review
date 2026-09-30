@@ -1,6 +1,9 @@
-numpy>=1.24
-scipy>=1.11
-# figures/figures.ipynb additionally requires:
-matplotlib>=3.7
+# Versions used for the analyses reported in the article (Python 3.11)
+numpy==1.26.4
+scipy==1.11.4
+
+# Figures (figures/figures.ipynb)
 pandas>=2.0
+matplotlib>=3.7
 geopandas>=0.14
+jupyter

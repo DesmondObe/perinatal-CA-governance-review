@@ -1,0 +1,4 @@
+# Normalise line endings so edits on Windows do not rewrite every line
+* text=auto eol=lf
+*.png binary
+*.pdf binary
